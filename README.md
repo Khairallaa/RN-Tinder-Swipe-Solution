@@ -1,50 +1,40 @@
-# Welcome to your Expo app 👋
+# RN-Tinder-Swipe-Solution (حل بطاقات السحب المشابهة لـ Tinder)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+هذا المشروع هو حل لتطبيق بسيط مشابه لتطبيق Tinder، يركز على تنفيذ ميزة سحب البطاقات (Swipe Cards) باستخدام مكتبتي `react-native-reanimated` و `react-native-gesture-handler` لضمان سلاسة الرسوم المتحركة.
 
-## Get started
+## المتطلبات المنفذة
 
-1. Install dependencies
+*   **عرض البطاقات:** يتم عرض 3 بطاقات مكدسة في الواجهة.
+*   **السحب التفاعلي:** يمكن سحب البطاقة العلوية لليسار أو اليمين.
+*   **سلوكيات مختلفة:**
+    *   السحب لليمين (Like): يتم تسجيل "Liked!" في الكونسول.
+    *   السحب لليسار (Dislike): يتم تسجيل "Disliked!" في الكونسول.
+*   **الرسوم المتحركة:** تم استخدام `react-native-reanimated` لضمان أداء سلس ومستجيب.
 
-   ```bash
-   npm install
-   ```
+## كيفية التشغيل
 
-2. Start the app
+1.  **استنساخ المستودع:**
+    ```bash
+    git clone https://github.com/Khairallaa/RN-Tinder-Swipe-Solution.git
+    cd RN-Tinder-Swipe-Solution
+    ```
 
-   ```bash
-   npx expo start
-   ```
+2.  **تثبيت التبعيات:**
+    ```bash
+    pnpm install
+    # أو npm install / yarn install
+    ```
 
-In the output, you'll find options to open the app in a
+3.  **تشغيل التطبيق:**
+    ```bash
+    npx expo start
+    ```
+    بعد التشغيل، يمكنك مسح رمز QR ضوئيًا باستخدام تطبيق Expo Go على هاتفك المحمول لمعاينة التطبيق، أو الضغط على `w` لتشغيله على الويب.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## هيكل المشروع
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+*   `app/(tabs)/index.tsx`: يحتوي على منطق مكدس البطاقات، ومعالجة الإيماءات (Gesture Handling)، ومنطق الرسوم المتحركة (Reanimated).
+*   `components/Card.tsx`: مكون البطاقة (Card) البسيط لتصميم عرض الملف الشخصي.
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+*تم إنشاء هذا الحل بواسطة Manus-Agent بناءً على طلب المستخدم.*
